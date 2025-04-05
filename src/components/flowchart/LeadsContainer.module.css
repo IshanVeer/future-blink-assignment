@@ -1,0 +1,56 @@
+.headingContainer {
+  padding: 16px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.heading {
+  margin: 0;
+  font-size: x-large;
+}
+.description {
+  margin: 0;
+  font-size: 16px;
+}
+
+.leadsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffff;
+  border: 1px solid #e6e6e6;
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+.buttonImageContainer {
+  width: 50px;
+  height: 50px;
+  background-color: #b84d985c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b6317c;
+  border-radius: 5px;
+}
+.buttonImage {
+  width: 35px;
+}
+.buttonContent {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.buttonContentHeading {
+  font-size: large;
+  margin: 0;
+}
+.buttonContentdescription {
+  font-size: 16px;
+  width: 80%;
+  margin: 0;
+}

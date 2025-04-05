@@ -2,7 +2,7 @@ import React from "react";
 import { createPortal } from "react-dom";
 import css from "./Modal.module.css";
 
-const Modal = ({ onClose }) => {
+const Modal = ({ onClose, children }) => {
   return createPortal(
     <div className={css.modalOverlay}>
       <div className={css.modalContent}>
@@ -15,7 +15,7 @@ const Modal = ({ onClose }) => {
             />
           </button>
         </div>
-        <div>Modal</div>
+        <div>{children}</div>
       </div>
     </div>,
     document.getElementById("modal")

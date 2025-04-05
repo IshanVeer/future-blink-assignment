@@ -2,21 +2,24 @@ import { useState } from "react";
 import "./App.css";
 import Flow from "./components/flowchart/Flow";
 import Modal from "./components/ui/Modal";
+import LeadsContainer from "./components/flowchart/LeadsContainer";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLeadsContainerOpen, setIsLeadsContainerOpen] = useState(false);
 
-  const openModalHandler = () => {
-    setIsModalOpen(true);
+  const openLeadsContainerHandler = () => {
+    setIsLeadsContainerOpen(true);
   };
-  const closeModalHandler = () => {
-    setIsModalOpen(false);
+  const closeLeadsContainerHandler = () => {
+    setIsLeadsContainerOpen(false);
   };
 
   return (
     <div className="container">
-      {isModalOpen && <Modal onClose={closeModalHandler} />}
-      <Flow onOpen={openModalHandler} />
+      {isLeadsContainerOpen && (
+        <LeadsContainer onClose={closeLeadsContainerHandler} />
+      )}
+      <Flow onOpen={openLeadsContainerHandler} />
     </div>
   );
 }
