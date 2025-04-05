@@ -15,9 +15,8 @@ function App() {
 
   return (
     <div className="container">
-      <button onClick={openModalHandler}>open</button>
       {isModalOpen && <Modal onClose={closeModalHandler} />}
-      <Flow />
+      <Flow onOpen={openModalHandler} />
     </div>
   );
 }
